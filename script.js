@@ -21,7 +21,7 @@ function generatePassword() {
   var length = Number(prompt("How many characters will your password be? Please enter a number between 8 and 128!"));
 
   //if invalid number is given, or window is cancelled, force TryAgain
-  if (length < 8 || length > 128 || length == false) {
+  if (isNaN(length) || length < 8 || length > 128 || length == false) {
     alert("Please choose a value between 8 and 128!")
     var TryAgain = "Try again!";
     return TryAgain
